@@ -34,4 +34,38 @@ public class Result<T> implements Serializable {
         this.resultCode = resultCode;
         this.message = message;
     }
+
+    public static <T> Result ok() {
+        Result result = new Result();
+        result.resultCode = 200;
+        result.message = "Success";
+        return result;
+    }
+
+    public static <T> Result ok(T data) {
+        Result result = new Result();
+        result.resultCode = 200;
+        result.message = "Success";
+        result.data = data;
+        return result;
+    }
+
+    public static <T> Result ok(int resultCode, String message, T data) {
+        Result result = new Result();
+        result.resultCode = resultCode;
+        result.message = message;
+        result.data = data;
+        return result;
+    }
+
+    public static <T> Result error() { return error(500, "未知异常,请联系管理员"); }
+
+    public static <T> Result error(String msg) { return error(500, msg); }
+
+    public static <T> Result error(int code, String msg) {
+        Result result = new Result();
+        result.resultCode = code;
+        result.message = msg;
+        return result;
+    }
 }
