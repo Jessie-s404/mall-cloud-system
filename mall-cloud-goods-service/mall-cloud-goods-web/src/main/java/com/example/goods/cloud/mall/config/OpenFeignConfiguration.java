@@ -1,4 +1,4 @@
-package com.example.goods.cloud.mall.config.handler;
+package com.example.goods.cloud.mall.config;
 
 import feign.Logger;
 import org.springframework.context.annotation.Configuration;

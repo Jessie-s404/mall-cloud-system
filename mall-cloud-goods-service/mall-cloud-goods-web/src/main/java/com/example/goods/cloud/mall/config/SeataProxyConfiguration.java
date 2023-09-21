@@ -1,4 +1,4 @@
-package com.example.goods.cloud.mall.config.handler;
+package com.example.goods.cloud.mall.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;

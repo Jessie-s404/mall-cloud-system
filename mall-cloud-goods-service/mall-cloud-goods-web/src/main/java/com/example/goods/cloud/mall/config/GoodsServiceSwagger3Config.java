@@ -1,4 +1,4 @@
-package com.example.goods.cloud.mall.config.handler;
+package com.example.goods.cloud.mall.config;
 
 import com.example.common.cloud.mall.pojo.AdminUserToken;
 import com.example.common.cloud.mall.pojo.MallUserToken;
