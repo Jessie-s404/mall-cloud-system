@@ -33,6 +33,12 @@ public class TokenToAdminUserMethodArgumentResolver implements HandlerMethodArgu
 
     }
 
+    /**
+     * note 判断Controller层中的参数是否满足条件，满足条件则执行resolveArgument方法，不满足则跳过
+     *
+     * @param parameter
+     * @return
+     */
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
         if (parameter.hasParameterAnnotation(TokenToAdminUser.class)) {
@@ -41,6 +47,17 @@ public class TokenToAdminUserMethodArgumentResolver implements HandlerMethodArgu
         return false;
     }
 
+    /**
+     * note 只有在supportParameter方法返回true的情况下才会被调用，用于处理一些业务，将返回值赋值给Controller层中的这个参数
+     *      (简而言之，这个接口实现了对Controller层中的参数的提取和修改)
+     *
+     * @param parameter
+     * @param mavContainer
+     * @param webRequest
+     * @param binderFactory
+     * @return
+     * @throws Exception
+     */
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         if (parameter.getParameterAnnotation(TokenToAdminUser.class) instanceof TokenToAdminUser) {

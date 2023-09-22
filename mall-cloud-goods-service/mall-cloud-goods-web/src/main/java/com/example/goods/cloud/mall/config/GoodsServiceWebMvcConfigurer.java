@@ -47,7 +47,7 @@ public class GoodsServiceWebMvcConfigurer extends WebMvcConfigurationSupport {
 
     /**
      * 自定义参数预处理
-     * 请求进入Controller方法前会被该方法截取，调用其中添加的自定义处理方法对参数进行处理，处理好的参数再传给Controller中的方法
+     * note 请求进入Controller方法前会被该方法截取，调用其中添加的自定义处理方法对参数进行处理，处理好的参数再传给Controller中的方法
      *
      * @param argumentResolvers
      */
