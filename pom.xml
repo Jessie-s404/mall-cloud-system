@@ -17,6 +17,7 @@
         <module>mall-cloud-goods-service</module>
         <module>mall-cloud-gateway-mall</module>
         <module>mall-cloud-gateway-admin</module>
+        <module>zipkin-server</module>
     </modules>
 
     <properties>
